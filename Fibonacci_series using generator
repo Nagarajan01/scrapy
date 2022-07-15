@@ -1,0 +1,9 @@
+a = int(input('Give amount: '))
+fab = [0, 1, 1]
+def fab_gen():
+    while True:
+        fab.append(fab[-1] + fab[-2])
+        yield fab[-4]
+fg = fab_gen()
+for i in range(a):
+    print(fg.__next__())
