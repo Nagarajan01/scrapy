@@ -1,0 +1,7 @@
+def reverse(a):
+    b=[]
+    for i in a:
+        b.append(i)
+    yield b[::-1]
+a="nagarajan"
+print(reverse(a).__next__())
