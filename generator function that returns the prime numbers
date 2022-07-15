@@ -1,0 +1,14 @@
+def prime_number(start, end):
+    a = []
+    for i in range(start,end+1):
+        if i>1:
+            count = 0
+            for j in range(1,end+1):
+                if i%j==0:
+                    count+=1
+                else:
+                    pass
+            if count==2:
+                a.append(i)
+    yield ("prime_number :", a)
+print(prime_number(1,1000).__next__())
