@@ -1,0 +1,6 @@
+def cube(num):
+    a=[]
+    for i in range(num, 101):
+        a.append( i * i * i)
+    yield a
+print(cube(2).__next__())
